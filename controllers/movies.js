@@ -5,7 +5,7 @@ const NotFoundError = require('../errors/not-found-error');
 const ForbiddenError = require('../errors/forbidden-error');
 
 module.exports.getMovies = (req, res, next) => {
-  Movies.find({})
+  Movies.find({ owner: req.user._id })
     .then((movies) => {
       res.send({ data: movies });
     })

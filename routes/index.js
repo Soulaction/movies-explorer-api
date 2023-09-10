@@ -16,7 +16,7 @@ const NotFoundError = require('../errors/not-found-error');
 router.use('/users', auth, usersRouter);
 router.use('/movies', auth, moviesRouter);
 
-router.get('/signout', (req, res) => {
+router.get('/signout', auth, (req, res) => {
   res.clearCookie('token')
     .send({ message: 'Выход' });
 });
