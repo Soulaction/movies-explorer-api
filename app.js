@@ -22,7 +22,7 @@ app.use(express.json());
 app.use(cookieParser());
 
 app.use(requestLogger);
-app.use(appRouter);
+app.use('/api', appRouter);
 
 app.use(errorLogger);
 app.use(errors());
