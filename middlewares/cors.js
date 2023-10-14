@@ -1,6 +1,6 @@
 const allowedCors = [
-  'http://localhost:3000',
-  'https://pictures.nomoredomainsicu.ru',
+  'http://localhost:3001',
+  'https://film-movies.nomoredomainsrocks.ru',
 ];
 const DEFAULT_ALLOWED_METHODS = 'GET,HEAD,PUT,PATCH,POST,DELETE';
 
