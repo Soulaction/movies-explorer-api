@@ -17,7 +17,7 @@ router.use('/users', auth, usersRouter);
 router.use('/movies', auth, moviesRouter);
 
 router.get('/signout', auth, (req, res) => {
-  res.clearCookie('token')
+  res.clearCookie('token', { sameSite: 'none', secure: true })
     .send({ message: 'Выход' });
 });
 
